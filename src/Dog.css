@@ -1,0 +1,14 @@
+.dog {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dog img {
+    width: 15vw;
+    height: 15vw;
+    border: 10px #5b8390 solid;
+  }
+  
+  .dog .btn {
+    margin-top: 1rem;
+  }

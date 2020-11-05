@@ -1,0 +1,14 @@
+.cat {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cat img {
+    width: 15vw;
+    height: 15vw;
+    border: 10px #5b8390 solid;
+  }
+  
+  .cat .btn {
+    margin-top: 1rem;
+  }
