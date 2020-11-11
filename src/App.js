@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Dog from './Dog'
 import Cat from './Cat'
+import Winner from './Winner'
 
 class App extends React.Component {
   constructor(){
@@ -33,18 +34,26 @@ class App extends React.Component {
 
 
   render() {
-    return (
-    <div className="app">
-      <div className="header">
-        <h1>Choose Your Fighter!</h1>
-        <h1>Round {this.state.round}</h1>
-      </div>
-      <div className="fighters">
-        <Dog ref={this.dogRef} win={this.handleWin}/>
-        <Cat ref={this.catRef} win={this.handleWin}/>
-      </div>
-    </div>
+    let content = (
+      <>
+        <div className="header">
+          <h1>Choose Your Fighter!</h1>
+          <h1>Round {this.state.round}</h1>
+        </div>
+        <div className="fighters">
+          <Dog ref={this.dogRef} win={this.handleWin}/>
+          <Cat ref={this.catRef} win={this.handleWin}/>
+        </div>
+      </>
     );
+    if(this.state.round === 4){
+      let winner = "dog";
+      if(this.state.catScore > this.state.dogScore){
+        winner = "cat";
+      }
+      content = <Winner winner={winner}/>;
+    }
+    return <div className="app">{content}</div>
   }
 }
 

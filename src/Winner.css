@@ -1,0 +1,13 @@
+.winner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80vh;
+    backdrop-filter: blur(5px);
+    border-radius: 100%;
+    border: 10px solid #7dacbc;
+  }
+  .winner img {
+    width: 50%;
+  }
