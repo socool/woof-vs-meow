@@ -1,5 +1,6 @@
 import React from "react";
 import "./Cat.css";
+import configData from "./config.json"
 
 class Cat extends React.Component {
   constructor() {
@@ -16,7 +17,7 @@ class Cat extends React.Component {
   fetchImg = () => {
     fetch(this.url, {
       headers: {
-        "x-api-key": "a2f0d871-ee3c-484a-85e6-b1ec33520420",
+        "x-api-key": configData.API_KEY,
       },
     })
       .then((response) => {
@@ -32,7 +33,9 @@ class Cat extends React.Component {
       });
   };
 
-  handelClick=()=>{}
+  handleClick = () =>{
+    this.props.win("cat")
+  }
 
   render() {
     return (

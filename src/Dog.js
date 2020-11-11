@@ -10,7 +10,9 @@ class Dog extends React.Component {
     };
   }
 
-  handleClick=()=>{}
+  handleClick = () =>{
+    this.props.win("dog")
+  }
 
   fetchImg = () => {
     fetch(this.url)
